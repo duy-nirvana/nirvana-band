@@ -1,0 +1,58 @@
+.wrapper {
+    color: #999;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    font-weight:  100;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-left,
+.menu-right {
+    display:  flex;
+}
+
+.icon-left ,
+.icon-right,
+.icon-left > a,
+.icon-right > a {
+    color: #999;
+    font-size: 13px;
+    margin: 12px 10px;
+    --transition: all 1s;
+}
+
+.icon-left i,
+.icon-right i,
+.login {
+    transition: color 0.3s;
+}
+
+.icon-right:last-child {
+    margin-right: 0;
+}
+
+.dash {
+    margin: 0 10px;
+}
+
+.fa-facebook-f:hover {
+    color: #00F;
+}
+
+.fa-twitter:hover {
+    color: #4775d1;
+}
+
+.fa-youtube:hover {
+    color: #F00;
+}
+
+.fa-google:hover {
+    color: #ff1a1a;
+}
+
+.login:hover,
+.fas:hover {
+    color: #FF0;
+}
