@@ -2,13 +2,14 @@ body {
     margin: 0;
 }
 
+/* menu left and menu-right*/
 .wrapper {
     background: #000;
     color: #999;
     height: 4rem;
     font-family: Roboto, sans-serif;
     font-size: 13px;
-    font-weight:  100;
+    font-weight:  bold;
     display: flex;
     justify-content: space-around;
 }
@@ -25,7 +26,7 @@ body {
 .icon-right > a {
     color: #999;
     font-size: 13px;
-    margin: 12px 10px;
+    margin: 12px 5px;
 }
 
 .menu-right > a {
@@ -44,26 +45,43 @@ body {
 }
 
 .dash {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
-.fa-facebook-f:hover {
-    color: #00F;
-}
-
-.fa-twitter:hover {
-    color: #4775d1;
-}
-
-.fa-youtube:hover {
-    color: #F00;
-}
-
-.fa-google:hover {
-    color: #ff1a1a;
-}
-
+.fab:hover,
 .login:hover,
 .fas:hover {
     color: #FF0;
+}
+
+/* make a line and the avatar */
+.line {
+    height: 5px;
+    background-color: #FF0;
+}
+
+
+.background-avatar  {
+    position: relative;
+    width: 13rem;
+    height: 10rem;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./nirvana-black.jpg');
+    border: 5px solid #FF0;
+    border-top: none;
+}
+
+.nirvana-avatar {
+    height: 100%;
+    background-image: url('./nirvana-black.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;    
+    transition: all 0.3s;
+}
+
+.nirvana-avatar:hover  {
+    opacity: 1;
+    background-size: 20%;
 }
