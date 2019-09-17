@@ -22,6 +22,11 @@
     --transition: all 1s;
 }
 
+.menu-right > a {
+    color: #999;
+    text-decoration: none;
+}
+
 .icon-left i,
 .icon-right i,
 .login {
