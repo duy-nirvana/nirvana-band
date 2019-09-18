@@ -63,8 +63,8 @@ body {
 
 .background-avatar  {
     position: relative;
-    width: 13rem;
-    height: 10rem;
+    width: 10rem;
+    height: 8rem;
     background-size: cover;
     background-position: center;
     background-image: url('./nirvana-black.jpg');
