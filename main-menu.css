@@ -25,20 +25,19 @@ a:visited {
     content: none;
 } 
 
-.menu li:not(:last-child):after {
+.menu > li:not(:last-child):after {
     content: '|';
     color: #FFF;
     font-size: 10px;
     font-weight: 100;
 }
 
-.submenu li::after {
-    content: '';
+.menu li  > a::after {
+    content: " ";
 }
 
 .menu li {
     height: 0;
-    width: 
 }
 
 .menu li a {
@@ -51,20 +50,19 @@ a:visited {
 
 .submenu {
     position: absolute;
-    top: 100%;
-    justify-self: flex-start;
-    width: 12%;
+    top: 0;
+    height: 0;
+    width: 185px;
     list-style: none;
-    display: none;
-    --opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.5s;
+    z-index: -1;
+
 }
 
 .submenu li{
     width: 100%;
     height: 100%;
     background-color: #000;
-    transition: all 1s;
 }
 
 .submenu li a {
@@ -83,6 +81,10 @@ a:visited {
 }
 
 .menu li:hover .submenu{
-    opacity: 1;
-    display: flexbox;
+    top: 100%;
+    height: 100%;
+}
+
+.menu li:hover .submenu li{
+    color: cyan;
 }
