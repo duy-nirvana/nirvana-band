@@ -25,7 +25,7 @@ a:visited {
     content: none;
 } 
 
-.menu li::after {
+.menu li:not(:last-child):after {
     content: '|';
     color: #FFF;
     font-size: 10px;
@@ -33,7 +33,7 @@ a:visited {
 }
 
 .submenu li::after {
-    content: ' ';
+    content: '';
 }
 
 .menu li {
@@ -55,7 +55,8 @@ a:visited {
     justify-self: flex-start;
     width: 12%;
     list-style: none;
-    opacity: 0;
+    display: none;
+    --opacity: 0;
     transition: all 0.3s;
 }
 
@@ -83,4 +84,5 @@ a:visited {
 
 .menu li:hover .submenu{
     opacity: 1;
+    display: flexbox;
 }
