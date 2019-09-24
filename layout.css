@@ -1,0 +1,190 @@
+.layout {
+    display: grid;
+    grid-template-rows: 50px 700px 700px 700px 700px auto; 
+}
+
+/*-----Slider----*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 800;
+}
+
+::selection {
+    background: rgba(255, 255, 0, 0.5);
+}
+
+.slide-container {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.image-container {
+    width: 300%;
+    height: 100%;
+    position: relative;
+    transition: left 1s;
+}
+
+.slider-image {
+    position: relative;
+    width: 33.333%;
+    height: inherit;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.button-container {
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+}
+
+.slider-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    margin: 0 4px;
+    background-color: #FFF;
+    border: 2px solid #000;
+    opacity: 0.3;
+    transition: all 0.5s;
+}
+
+#slider-image-1:target ~ .image-container {
+    left: 0;
+}
+#slider-image-2:target ~ .image-container {
+    left: -100%;
+}
+#slider-image-3:target ~ .image-container {
+    left: -200%;
+}
+
+.slider-button:hover {
+    opacity: 0.8;
+    background-color: #FF0;
+}
+
+.text-container-1 {
+    position: absolute;
+    width: 10%;
+    height: 70%;
+    top: 20%;
+    left: 0.5%;
+    font-size: 50px;
+    color: #FF0;
+    text-shadow: 3px 5px #000;
+}
+
+.text-container-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 70%;
+    left: -6.5%;
+    font-size: 50px;
+    color: #FF0;
+    text-shadow: 3px 5px #000;
+}
+
+.text-container-3 {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 63%;
+    left: 68%;
+    font-size: 50px;
+    color: #FF0;
+    text-shadow: 3px 5px #444;
+}
+
+
+
+/*-----MENU---*/
+.menu {
+    position: absolute;
+    display: flex;
+    left: 22%;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    --background: #000;
+    z-index: 1;
+}
+
+a:visited {
+    color: #FFF;
+}
+
+.menu::after {
+    content: none;
+} 
+
+.menu > li:not(:last-child):after {
+    content: '|';
+    color: #FFF;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.menu li  > a::after {
+    content: " ";
+}
+
+.menu li {
+    height: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    height: 100%;
+    padding: 20px 10px 10px;;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+.submenu {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 185px;
+    list-style: none;
+    transition: all 0.5s;
+    display: none;
+}
+
+.submenu li{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.submenu li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 15px 0;
+    padding-left: 1.3em;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.menu li a:hover {
+    color: #FF0;
+}
+
+.menu li:hover .submenu{
+    top: 100%;
+    height: 100%;
+    display: block;
+    z-index: 3;
+}
