@@ -3,6 +3,10 @@
     margin: 0;
     font-family: Roboto, sans-serif;
     font-weight: 800;
+    color: #000;
+}
+:visited {
+    color: #000;
 }
 
 .member-container {
@@ -11,9 +15,9 @@
 }
 
 .text-member {
-    height: 15%;
+    height: 20%;
     text-align: center;
-    font-size: 3rem;  
+    font-size: 5rem;  
 }
 
 .member {
@@ -27,28 +31,82 @@
 .member--3 {
     position: relative;
     width: 25%;
-    height: 90%;
+    height: 80%;
     margin: 0 10px;
     background-position: center;
     background-size: cover;
     background-color: #000;
+    box-shadow: 7px 7px #000;
+    
 }
 
 .member--1 {
     background-image: url('./images/member--1.jpg');
 }
+.member--2 {
+    background-image: url('./images/member--2.jpg');
+}
+.member--3 {
+    background-image: url('./images/member--3.jpg');
+}
 
 .member__layout {
     width: 100%;
-    height: 20%;
+    height: 18%;
     position: absolute;
     bottom: 0;
-    background-color: #FF0;
-    opacity: 0.5;
+    background-color : rgba(255,255,0,0.8);
     transition: all 0.5s;
 }
 
-.member--1:hover .member__layout {
-    opacity: 0.5;
-    height: 60%;
+.member--1:hover .member__layout,
+.member--2:hover .member__layout,
+.member--3:hover .member__layout {
+    height: 35%;
+}
+
+.member__heading {
+    font-size: 20px;
+    text-align: center;
+    opacity: 1;
+}
+
+.member__heading--2 h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.member__heading--2 p {
+    font-size: 20px;
+}
+
+.member__layout--hidden {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.member__layout--hidden a {
+    text-decoration: none;
+    font-size: 20px;
+    background: #000;
+    color: #FF0;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.member--1:hover .member__layout--hidden,
+.member--2:hover .member__layout--hidden,
+.member--3:hover .member__layout--hidden {
+    opacity: 1;
+}
+
+.member__layout--hidden a:hover {
+    color: #FFF;
 }
