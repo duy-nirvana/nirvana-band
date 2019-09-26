@@ -1,0 +1,116 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+:visited {
+    color: #FF0;
+}
+.album-container {
+    background-color: #000;
+    height: 600px;
+    color: #FF0;
+}
+
+.album-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.albums {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.album {
+    width: 300px;
+    height: 350px;
+}
+
+.album__child {
+    width: inherit;
+    height: 85%;
+}
+
+.album__child--disk {
+    width: inherit;
+    height: 100%;
+    background-image: url('./images/disk.png');
+    transition: all 0.5s;
+}
+
+.album__child--cover {
+    width: inherit;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.cover-1 {
+    background-image: url('./images/album-1.jpg');
+}
+.cover-2 {
+    background-image: url('./images/album-2.jpg');
+}
+.cover-3 {
+    background-image: url('./images/album-3.jpg');
+}
+
+.album__child--layout {
+    width: inherit;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.album__child--layout a{
+    width: 50px;
+    height: 50px;
+}
+
+.album__child--button {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-image: url('./images/add-layout-black.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,0,0.5);
+    border-radius: 40px;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.album:hover .album__child--disk {
+    transform: translate(100px);
+}
+
+.album:hover .album__child--cover {
+    transform: translate(-150px);
+}
+
+.album:hover .album__child--button {
+    transform: translate(-10px, 110px);
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+}
+
+.album__child--button:hover {
+    background-image: url('./images/add-layout-yellow.png');
+    background-color: rgba(0,0,0,0.8);
+    
+}
+
+.album__info {
+    width: inherit;
+    height: 15%;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.album__info a {
+    text-decoration: none;
+}
