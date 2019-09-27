@@ -4,6 +4,9 @@
     font-family: Roboto, sans-serif;
     font-weight: 800;
 }
+.email a:visited {
+    color: #000;
+}
 
 .footer-container {
     width: 100%;
@@ -11,6 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #FF0;
 }
 
 .email {
@@ -18,27 +22,109 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    height: 30%;
-    background-color: #999;
+    height: 40%;
     margin-top: 30px;
+    background-color: #000;
+    color: #FF0;
 }
 
 .email input {
     width: 50%;
     height: 30%;
+    padding: 0 20px;
+}
+
+.email a {
+    position: relative;
+    right: 40px;
+    transition: all 0.3s;
+}
+
+.email__icon {
+    font-size: 20px;   
 }
 
 .email h3 {
     margin: 0 15px;
 }
 
+.email h3:first-child {
+    margin-right: 0;
+}
 .email h3:last-child {
     width: 25%;
     text-align: right;
 }
 
+.email a:hover {
+    color: #FF0;
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
 .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 80%;
-    height: 70%;
-    background-color: #333;
+    height: 60%;
+    border-bottom: 1px solid #000;
+}
+
+.contact h3 {
+    margin: 30px 0 10px 0;
+}
+
+.contact p {
+    width: 35%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    display: flex;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-image: url('./images/amazon.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #000;
+    transition: all 0.3s;
+}
+
+.contact-icon a {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.apple-store {
+    background-image: url('./images/apple-logo.png');
+}
+
+.google-play {
+    background-image: url('./images/google-play.png');
+}
+
+.amazon {
+    background-image: url('./images/amazon.png');
+}
+
+.spotify {
+    background-image: url('./images/spotify.png');
+}
+
+.soundclound {
+    background-image: url('./images/soundcloud.png');
+}
+
+.contact-icon a:hover .icon{
+    box-shadow: 3px 3px rgba(0,0,0,0.5);
+}
+
+.footer__end {
+   font-size: 12px;
+   margin: 10px 0;
 }
