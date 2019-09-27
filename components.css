@@ -24,6 +24,10 @@
     padding: 0 30px;
     border-bottom: 2px solid #FF0;
 }
+
+.wrapper a:link {
+    color: #FFF;
+}
 .wrapper a:visited {
     color: #FFF;
 }
@@ -194,6 +198,9 @@
     z-index: 1;
 }
 
+.menu a:link {
+    color: #FFF;
+}
 .menu a:visited {
     color: #FFF;
 }
@@ -322,6 +329,9 @@
     transition: all 0.3s;
 }
 
+.about__icon a:link {
+    color: #000;
+}
 .about__icon a:visited {
     color: #000;
 }
@@ -544,6 +554,9 @@
     color: #FF0;
 }
 
+.album__info a:link {
+    color: #FF0;
+}
 .album__info a:visited {
     color: #FF0;
 }
@@ -590,6 +603,9 @@
     transition: all 0.3s;
 }
 
+.email a:link {
+    color: #000;
+}
 .email__icon {
     font-size: 20px;   
 }
